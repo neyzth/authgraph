@@ -15,19 +15,19 @@ Script basique créé avec node.js permettant de récupérer les ip présentes d
 
 Récupérer le code du projet sur votre machine
 ```bash
-  git clone https://github.com/neyzth/authgraph.git
+git clone https://github.com/neyzth/authgraph.git
 ```
 Acceder au répertoire du projet
 ```bash
-  cd authgraph/
+cd authgraph/
 ```
 Installer les modules nécessaires à l'utilisation de ce projet
 ```bash
-  npm i 
+npm i 
 ```
 Et enfin pour lancer l'éxecution 
 ```bash
-  npm start
+npm start
 ```
 
 A la fin de l'éxecution un fichier " graph.jpg " aura été créé !
