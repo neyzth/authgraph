@@ -6,7 +6,7 @@ Script basique créé avec node.js permettant de récupérer les ip présentes d
 
 
 ## Exemple
-<img src="https://github.com/neyzth/authgraph/blob/main/exemple.jpg" alt="Graphique d'exemple">
+![This is an image](https://github.com/neyzth/authgraph/blob/main/exemple.jpg)
 
 
 
