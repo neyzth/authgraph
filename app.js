@@ -41,7 +41,7 @@ fs.readFile(authlog, 'utf8', (err, data) => {
                 let pourcentage = Math.round((counter  * 100 ) / ips.length );
                 let progressbar = '';
                 let i = 1;
-                while(pourcentage / 2 > i) {
+                while(pourcentage / 2 >= i) {
                     progressbar = progressbar + '█';
                     i++;
                 }
@@ -55,8 +55,10 @@ fs.readFile(authlog, 'utf8', (err, data) => {
                 console.error(err);
             }
         }
+
         let end = new Date();
         const difftime = (end - start);
+
         console.log(`Temps écoulé : ${ms(difftime)}`);
         console.log(`Temps moyen  : ${(difftime / 1000) / ips.length} secondes par ip`);
 
@@ -98,11 +100,14 @@ fs.readFile(authlog, 'utf8', (err, data) => {
               }
             },
         };
+
         const chartJSNodeCanvas = new ChartJSNodeCanvas({ type: 'jpg', width: (100 * count.length), height: 1080, backgroundColour: "white" });
         const buf = await chartJSNodeCanvas.renderToBuffer(config)
+
         fs.writeFile('graph.jpg', buf, (err) => {
             if (err) throw err;
             console.log("Le graphique à bien été généré.");
         });
+
     })()
 });
