@@ -70,19 +70,14 @@ fs.readFile(authlog, 'utf8', (err, data) => {
               : -1
         });
         
-        const names = [];
-        count.forEach(name => {
-            names.push(name.nom);
-        });
-        const values = [];
-        count.forEach(name => {
-            values.push(name.count);
-        });
+        const names = count.map(el => el.nom);
+        const values = count.map(el => el.count);
         const colors = [];
 
         for (const it of count) {
             var o = Math.round, r = Math.random, s = 255;
-            colors.push('rgb(' + o(r()*s) + ',' + o(r()*s) + ',' + o(r()*s) + ')');
+            
+            colors.push(`rgb(${o(r()*s)}, ${o(r()*s)}, ${o(r()*s)})`)
         }
         const data = {
             labels: names,
